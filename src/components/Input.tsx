@@ -9,6 +9,7 @@ interface Props {
   name: string;
   type: InputHTMLAttributes<'text'>['type'];
   options: RegisterOptions;
+  placeholder: string;
 }
 
 const ERROR_MESSAGE: Partial<Record<FieldError['type'], string>> = {
@@ -32,6 +33,7 @@ export default function Input({
   type,
   className,
   options,
+  placeholder,
 }: Props) {
   const {
     register,
@@ -47,6 +49,7 @@ export default function Input({
       </label>
       <div className="relative">
         <input
+          placeholder={placeholder}
           id={name}
           type={type}
           className={`

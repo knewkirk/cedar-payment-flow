@@ -40,6 +40,7 @@ export default function PaymentInformation() {
           minLength: 16,
           maxLength: 16,
         }}
+        placeholder="1234567812345678"
       />
       <div className="flex mb-4">
         <Input
@@ -51,6 +52,7 @@ export default function PaymentInformation() {
             required: true,
             pattern: /\d{2}\/\d{2}/,
           }}
+          placeholder="12/34"
         />
         <Input
           label="Security code (CVV)"
@@ -61,6 +63,7 @@ export default function PaymentInformation() {
             minLength: 3,
             maxLength: 3,
           }}
+          placeholder="321"
         />
       </div>
       <Input
@@ -69,6 +72,7 @@ export default function PaymentInformation() {
         type="text"
         name="name"
         options={{ required: true }}
+        placeholder="Jane Doe"
       />
       <Input
         className="mb-4"
@@ -76,6 +80,7 @@ export default function PaymentInformation() {
         type="number"
         name="zip"
         options={{ required: true, minLength: 5, maxLength: 5 }}
+        placeholder="98765"
       />
     </MainFlowStep>
   );
